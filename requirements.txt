@@ -1,0 +1,7 @@
+requests
+firebase-admin
+selenium
+pyperclip
+pyotp
+pytesseract
+pyautogui
