@@ -6,7 +6,7 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 import asyncio
 import queue
-
+import os
 # -------- CONFIG --------
 BOT_TOKEN = "8566703232:AAEUe1jyhoEdFzYAyFumQ2FdBMRQjCb5FKI"
 COLLECTION = "FC DATA"
