@@ -7,6 +7,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, fil
 import asyncio
 import queue
 import os
+import json
 # -------- CONFIG --------
 BOT_TOKEN = "8566703232:AAEUe1jyhoEdFzYAyFumQ2FdBMRQjCb5FKI"
 COLLECTION = "FC DATA"
