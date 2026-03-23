@@ -13,13 +13,27 @@ COLLECTION = "FC DATA"
 CAIRO = ZoneInfo("Africa/Cairo")
 PASSWORD = "@2468@As"
 
-# ---------- Firebase ----------
-cred_facebook = credentials.Certificate("FacebookData.json")
+# =========================
+# Firebase 1 (Facebook)
+# =========================
+cred_facebook_json = os.getenv("FIREBASE_CREDENTIALS")
+cred_facebook_dict = json.loads(cred_facebook_json)
+
+cred_facebook = credentials.Certificate(cred_facebook_dict)
 facebook_app = firebase_admin.initialize_app(cred_facebook, name="facebook")
 db_facebook = firestore.client(facebook_app)
 
-cred_Makeo_media = credentials.Certificate("Makeo_media.json")
-cred_Makeo_media_app = firebase_admin.initialize_app(cred_Makeo_media, name="cred_Makeo_media")
+# =========================
+# Firebase 2 (Makeo Media)
+# =========================
+cred_makeo_json = os.getenv("Makeoa_media")
+cred_makeo_dict = json.loads(cred_makeo_json)
+
+cred_Makeo_media = credentials.Certificate(cred_makeo_dict)
+cred_Makeo_media_app = firebase_admin.initialize_app(
+    cred_Makeo_media,
+    name="cred_Makeo_media"
+)
 db_Makeo_media = firestore.client(cred_Makeo_media_app)
 
 # ---------- GLOBAL ----------
